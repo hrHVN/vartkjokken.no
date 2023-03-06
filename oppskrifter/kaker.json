@@ -1,0 +1,24 @@
+{
+    "ostekake": {
+        "navn": "Ostekake med Jorbærlokk",
+        "ingredienser": {
+            "smør": "150 g",
+            "digestive": "300 g",
+            "gryr-fløte": "3 dl",
+            "sukker": "150 g",
+            "pamacern": "200 g",
+            "kvitsjokolade": "150-60 g",
+            "gelantinplater": "4-5 stk",
+            "gelepakker": "2 stk"
+        },
+        "frammgangsmåte": [],
+        "allergiar": [
+            "gluten",
+            "gelantin (svin)",
+            "sukker (diabetes)"
+        ],
+        "bilder": [
+            "./media/ostekake.jifi"
+        ]
+    }
+}
