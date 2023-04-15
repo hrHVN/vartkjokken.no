@@ -1,0 +1,116 @@
+<!-- Recepie container Style -->
+<article class="container-fluid mb-5">
+    <div class="container-lg">
+
+        <!-- Item title and collapsControlls -->
+        <div id="this-[item]-title" class="card mb-3 container-md">
+
+            <span class="w-100 h-100 position-absolute" role="button" data-bs-toggle="collapse" href="#this-item-inner"
+                aria-expanded="true" aria-controls="#this-item-inner" style="z-index: 1;"></span>
+
+            <div class="row g-0">
+                <!-- card Bilde -->
+                <div class="col-md-4 container-sm">
+                    <img class="img-thumbnail img-fluid" src="./media/ostekake.jifi" alt="Kake-bilde"
+                        class="img-fluid rounded-start">
+                </div>
+                <!-- Card body/text -->
+                <div class="col-md-8 container-sm">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= data.navn %></h4>
+                        <p class="card-text"><b>Ingridienser:</b>
+                        <% data.ingredienser.forEach(element => { %>
+                            <%=` ${element} - ${data.[element]} |`%>
+                        <% }) %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Item collaps container -->
+        <div class="collapse container-lg" id="this-item-inner">
+            <div class="card card-body mb-sm-3 mb-lg-1">
+                <div class="row">
+                    <!-- Table of ingredients -->
+                    <div class="col-md-4">
+                        <table class="table">
+                            <title>Ingredienser</title>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mengde</th>
+                                    <th scope="col">Ingrediens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% data.ingredienser.forEach(element => { %>
+                                    <tr>
+                                        <td scope="row"><%= data.[element]%></td>
+                                        <td colspan="3"><%= element%></td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Instructions -->
+                    <div class="col-md-8">
+                        <h4>Framgangs måte</h4>
+                        <div>
+                            <h5>Steg 1</h5>
+                            <p>
+                                knus kjeks i en skål til sand. Smelt smøret og blandt med kjeksen.
+                            </p>
+                            <p>Legg ein ein spiral ring oppå det kakefatet du ynskjer å servere kaka på, og trykk
+                                kjekks blandingen utover til du får ein jamn bunn, og sett kaldt</p>
+                        </div>
+                        <div>
+                            <h5>Steg 2</h5>
+                            <p>Visp gryr fløyte og sukker til krem, tilsett Otley smørost</p>
+                        </div>
+                        <div>
+                            <h5>Steg 3</h5>
+                            <p>Legg gelatinplatene i en stor skål med kaldt vann, i minimumm 4-5 min. kok opp 1 dl
+                                vann, ta av plata. når gelatinplatene er myke tar du de opp og klemmer ut så mye
+                                vann som mulig. ha gelatinplatene oppi det oppkokte vannet.og rør godt med en visp,
+                                til alt er oppløst.</p>
+                            <p>Løft gelatinblandingen inn i kremen med ei slikkepott eller sleiv. (Ikke bruk visp!!)
+                            </p>
+                        </div>
+                        <div>
+                            <h5>Steg 4</h5>
+                            <p>Smelt hvit sjokoladen i et vannbad. Løft så den smeltet sjokoladen inn i røren.</p>
+                            <p>Smør ostekremen jevnt utover den kalde kjekksbunnen, og sett tilbake i
+                                kjøleskap/kjølerom</p>
+                        </div>
+                        <div>
+                            <h5>Steg 5</h5>
+                            <p>kok opp en halv liter vann. ta av platen og tilsett 2 pakker gelepulver. rør til det
+                                ikke er noe pulver igjen. la gelen avkjøle seg litt før du har over på kaken.</p>
+                            <p>Tøm den avkjølte geleblandingen over den kalde ostekremen sån at du danner eit
+                                gelelokk.</p>
+                            <p class="text-sm"><b><i>Pro Tip:</i></b> Hold ei tskjei som eit skjold når du tømmer
+                                geleblandingen oppå
+                                ostekremen. Då ungår du at strålen graver eit hol i ostekremen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Refereance pivtures -->
+            <div class="container-fluid mb-sm-3 mb-lg-1">
+                <hr>
+                <img src="https://gryr.no/produkter/gryr-til-matlaging/_/image/b0e5997d-3635-4967-b4e4-958b2066501c:7909115246a2d2b6461deab1f6af9576a51cd5b5/max-640-360/Matfl%C3%B8yel%20nettside%20klar.png"
+                    alt="Gryr Matfløyel" class="img-fluid" style="width: 150ps; height: 150px;">
+                <img src="https://res.cloudinary.com/mecindo/image/fetch/e_trim:7/w_512,h_350,c_pad,b_white,q_80,f_auto/https://mecindo.dk/image/data/Products/helsam_updates/22608.jpg"
+                    alt="iChoco kvitsjokolade" class="img-fluid" style="width: 150ps; height: 150px;">
+                <img src="https://bilder.ngdata.no/7394376616327/meny/medium.jpg" alt="oatly påMackan"
+                    style="width: 150ps; height: 150px;">
+            </div>
+            <!-- Taglist -->
+            <div class="mb-sm-3 mb-lg-1">
+                <hr>
+                <button class="btn btn-outline-success">Melke-fri</button>
+                <button class="btn btn-outline-success">Vegetar</button>
+            </div>
+        </div>
+    </div>
+</article>

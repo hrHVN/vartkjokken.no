@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+
+    <title>Vartkjokken</title>
+</head>
+
+<body>
+    <!-- top nav -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+
+            <a href="#" class="navbar-brand display-1">
+                <img src="./media/cake-logo.png" alt="logo" width="75" height="75" class="d-inline-block">
+                Vårt Kjøkken
+            </a>
+            <span class="navbar-text">Allergivenlige oppskrifter</span>
+
+
+            <!-- Menu button toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigasjon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- Off Canvas -->
+            <div class="offcanvas-body" id="nav-dropp">
+                <!-- Search bar -->
+                <form role="search" class="d-flex mx-3">
+                    <input type="search" class="form-control me-2" placeholder="Søk" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <hr>
+                <!-- Link navigasjon -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Heim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./om-oss" class="nav-link">Om oss</a>
+                    </li>
+                </ul>
+                <!-- allergi Liste -->
+                <hr>
+                <div class="btn-group">
+                    <button class="btn btn-outline-success">Melkeprotein</button>
+                    <button class="btn btn-outline-success">Laktose</button>
+                    <button class="btn btn-outline-success">Gluten</button>
+                    <button class="btn btn-outline-success">Egg</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="container-md">
+        <!-- banner content -->
+        <div>
+            <h2 class="h4 pb-3 text-danger border-bottom border-danger">
+                Denna sida er under utvikkling, og derfor vil enkelte funksjonar ikkje være tilgjengelige.
+            </h2>
+        </div>
+    </div>
+
+    <!-- Recepie container Style -->
+    <article class="container-fluid mb-5">
+        <div class="container-lg">
+
+            <!-- Item title and collapsControlls -->
+            <div id="this-[item]-title" class="card mb-3 container-md">
+
+                <span class="w-100 h-100 position-absolute" role="button" data-bs-toggle="collapse"
+                    href="#this-item-inner" aria-expanded="true" aria-controls="#this-item-inner"
+                    style="z-index: 1;"></span>
+
+                <div class="row g-0">
+                    <!-- card Bilde -->
+                    <div class="col-md-4 container-sm">
+                        <img class="img-thumbnail img-fluid" src="./media/ostekake.jifi" alt="Kake-bilde"
+                            class="img-fluid rounded-start">
+                    </div>
+                    <!-- Card body/text -->
+                    <div class="col-md-8 container-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Melkefri Ostekake med Jordbær lokk</h4>
+                            <p class="card-text"><b>Ingridienser:</b> 150g - Smør | 300g - Digestive | 3dl - Gryr Fløte
+                                | 150g
+                                - Sukker |
+                                200g - påMacern | 150g - Kvitsjokolade | 4stk - Gelatinplater | 2pk - Jordbær gele</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Item collaps container -->
+            <div class="collapse container-md" id="this-item-inner">
+                <div class="card card-body mb-sm-3 mb-lg-1">
+                    <div class="row">
+                        <!-- Table of ingredients -->
+                        <div class="col-md-4">
+                            <table class="table">
+                                <title>Ingredienser</title>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mengde</th>
+                                        <th scope="col">Ingrediens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">150 g</td>
+                                        <td colspan="3">Smeltet smør/margarin</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">300 g</td>
+                                        <td>Digestive Kjekks</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">3 dl</td>
+                                        <td><a href="https://gryr.no/produkter/gryr-til-matlaging">Gryr</a> fløyte</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">150 g</td>
+                                        <td>Sukker</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">200 g</td>
+                                        <td><a
+                                                href="https://meny.no/varer/ost/plantebasert-erstatning-for-ost/pamackan-7394376616327">Oatly</a>
+                                            smørost (påMacern)</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">150-60 g</td>
+                                        <td>
+                                            <a
+                                                href="https://mecindo.no/ichoc-white-vanilla-o-80g-no?msclkid=e79709f86cc91a4d65ea6a588969cb3e&utm_source=bing&utm_medium=cpc&utm_campaign=NO%20-%20Smart%20Shopping%20-%20All&utm_term=4587780991922087&utm_content=NO%20-%20Smart%20Shopping%20-%20All">
+                                                Kvit</a> sjokolade
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">4-5 stk</td>
+                                        <td>Gelatinplater</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">2 stk</td>
+                                        <td>Jorbær Gele</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Instructions -->
+                        <div class="col-md-8">
+                            <h4>Framgangs måte</h4>
+                            <div>
+                                <h5>Steg 1</h5>
+                                <p>
+                                    knus kjeks i en skål til sand. Smelt smøret og blandt med kjeksen.
+                                </p>
+                                <p>Legg ein ein spiral ring oppå det kakefatet du ynskjer å servere kaka på, og trykk
+                                    kjekks blandingen utover til du får ein jamn bunn, og sett kaldt</p>
+                            </div>
+                            <div>
+                                <h5>Steg 2</h5>
+                                <p>Visp gryr fløyte og sukker til krem, tilsett Otley smørost</p>
+                            </div>
+                            <div>
+                                <h5>Steg 3</h5>
+                                <p>Legg gelatinplatene i en stor skål med kaldt vann, i minimumm 4-5 min. kok opp 1 dl
+                                    vann, ta av plata. når gelatinplatene er myke tar du de opp og klemmer ut så mye
+                                    vann som mulig. ha gelatinplatene oppi det oppkokte vannet.og rør godt med en visp,
+                                    til alt er oppløst.</p>
+                                <p>Løft gelatinblandingen inn i kremen med ei slikkepott eller sleiv. (Ikke bruk visp!!)
+                                </p>
+                            </div>
+                            <div>
+                                <h5>Steg 4</h5>
+                                <p>Smelt hvit sjokoladen i et vannbad. Løft så den smeltet sjokoladen inn i røren.</p>
+                                <p>Smør ostekremen jevnt utover den kalde kjekksbunnen, og sett tilbake i
+                                    kjøleskap/kjølerom</p>
+                            </div>
+                            <div>
+                                <h5>Steg 5</h5>
+                                <p>kok opp en halv liter vann. ta av platen og tilsett 2 pakker gelepulver. rør til det
+                                    ikke er noe pulver igjen. la gelen avkjøle seg litt før du har over på kaken.</p>
+                                <p>Tøm den avkjølte geleblandingen over den kalde ostekremen sån at du danner eit
+                                    gelelokk.</p>
+                                <p class="text-sm"><b><i>Pro Tip:</i></b> Hold ei tskjei som eit skjold når du tømmer
+                                    geleblandingen oppå
+                                    ostekremen. Då ungår du at strålen graver eit hol i ostekremen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Refereance pivtures -->
+                <div class="container-fluid mb-sm-3 mb-lg-1">
+                    <hr>
+                    <img src="https://gryr.no/produkter/gryr-til-matlaging/_/image/b0e5997d-3635-4967-b4e4-958b2066501c:7909115246a2d2b6461deab1f6af9576a51cd5b5/max-640-360/Matfl%C3%B8yel%20nettside%20klar.png"
+                        alt="Gryr Matfløyel" class="img-fluid" style="width: 150ps; height: 150px;">
+                    <img src="https://res.cloudinary.com/mecindo/image/fetch/e_trim:7/w_512,h_350,c_pad,b_white,q_80,f_auto/https://mecindo.dk/image/data/Products/helsam_updates/22608.jpg"
+                        alt="iChoco kvitsjokolade" class="img-fluid" style="width: 150ps; height: 150px;">
+                    <img src="https://bilder.ngdata.no/7394376616327/meny/medium.jpg" alt="oatly påMackan"
+                        style="width: 150ps; height: 150px;">
+                </div>
+                <!-- Taglist -->
+                <div class="mb-sm-3 mb-lg-1">
+                    <hr>
+                    <button class="btn btn-outline-success">Melke-fri</button>
+                    <button class="btn btn-outline-success">Vegetar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

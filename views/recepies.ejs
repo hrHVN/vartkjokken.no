@@ -1,0 +1,11 @@
+<%- include('__utils/__header.ejs') %>
+<%- include('__utils/__navigation.ejs') %>
+
+<section class="container pb-5">
+    <h1>Recepies</h1>
+</section>
+<% data.forEach(e => { %>
+    <%- include('__utils/__recepieCard.ejs', {e}) %>
+<% }) %>
+
+<%- include('__utils/__footer.ejs') %>
