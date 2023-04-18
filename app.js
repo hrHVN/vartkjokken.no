@@ -11,6 +11,7 @@ const port = 3000;
 const app = express();
 // Routers
 const recipiesRouter = require('./routes/recipies.js');
+const minheimRouter = require('./rotes/_myHouse.js');
 
 /*
     Express base settup
@@ -30,6 +31,8 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.send('./public/index.html');
 })
+
+app.use('/myhome', minheimRouter);
 
 app.use('/recepies', recipiesRouter);
 

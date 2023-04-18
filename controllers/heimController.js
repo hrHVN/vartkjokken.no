@@ -8,8 +8,8 @@ const connection = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_MINHEIM,
-    // socketPath: '/var/run/mysqld/mysqld.sock'
+    // database: process.env.DB_MINHEIM,  // If not specified, then we can create the db
+    // socketPath: '/var/run/mysqld/mysqld.sock' // for debugging 
 });
 
 const CloseDB = connection.end((err) => {
@@ -19,14 +19,7 @@ const CloseDB = connection.end((err) => {
 
 connection.connect(function (err) {
     if (err) return console.error('Error:', err.message);
-    console.log(`Connected to DB ${process.env.DB_TARGET}`);
-
-    // let catchNonExistentDB = `CREATE DATABASE if not exists vartkjokken_minheim`;
-    // connection.query(catchNonExistentDB, (err, res, fields) => {
-    //     if (err) console.error(err);
-    // });
-
-    CloseDB();
+    console.log(`Connected to DB ${process.env.DB_TARGET}`);    
 })
 
 /*
@@ -34,16 +27,23 @@ connection.connect(function (err) {
 */
 
 exports.index = (req, res, next) => {
+    let catchNonExistentDB = `CREATE DATABASE vartkjokken_minheim`;
+    connection.query(catchNonExistentDB, (err, res) => {
+        if (err) console.error(err);
+        console.log(result);
+    });
     res.send('Heim ikkje implimentert endå')
 };
 
 exports.insertNewItem = (req, res, next) => {
-    let statement = `INSERT INTO ${table}(${tbValues}) VALUES(?,?)`;
-    connection.query(statement, inputData, (err, res, fields) => {
+    let statement = `INSERT INTO ${req.data.table} SET ?`;
+    connection.query(statement, req.data.data, (err, res, fields) => {
         if (err) console.error(err.message);
 
     });
 };
+
+
 
 const CreateNewItem = (dataObject, callback) => {
     connection.connect((err) => {
