@@ -2,6 +2,7 @@ import NewDatabase from './DatabaseController/NewDataBase';
 import InsertData from './DatabaseController/insertData';
 import GetAll from './DatabaseController/getData';
 import GetDataById from './DatabaseController/getDataById';
+import UpdateData from './DatabaseController/updateData';
 
 export default class DatabaseController {
     constructor(connection) {
@@ -26,5 +27,11 @@ export default class DatabaseController {
 
     getDataById(table, objectId, callback) {
         InsertData(this.connection, table, objectId, callback);
+    }
+
+    updateObject(table, id, object, callback) {
+        UpdateData(this.connection, 
+            { data: object, id: id, tableName: table }, 
+            callback);
     }
 }
