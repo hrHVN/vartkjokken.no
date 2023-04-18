@@ -36,19 +36,3 @@ app.use('/recepies', recipiesRouter);
 /*
     Middleware
 */
-
-/*
-    DB settup
-*/
-const minHeimConnection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_TARGET,
-    // socketPath: '/var/run/mysqld/mysqld.sock'
-});
-
-minHeimConnection.connect(function (err) {
-    if (err) return console.error('Error:', err.message);
-    console.log(`Connected to DB ${process.env.DB_TARGET}`);
-})
