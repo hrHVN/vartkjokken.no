@@ -39,3 +39,9 @@ app.use('/recepies', recipiesRouter);
 /*
     Middleware
 */
+
+
+/*
+    DB initial settup
+*/
+
