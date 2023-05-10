@@ -1,4 +1,5 @@
-# Live webside for Vartkjokken.no
+# Webside for Vartkjokken.no
+Vårt Kjøkken er ei netside for ein nyopstarta catering-tjeneste med fokus på å utvikkle og servere allergi vennlig mat uten kompromiss på smak eller opplevelse. Nettsida skal og virke som bedriftens ansikt utad og ta imot bestillingar, nedriften ønsker og å ha ei oplysningsside om mat-allergiar og korleis ein kan lage god mat og ta hennsy til eventuelle allergiar uten å gå på bekostning av helsa.  
 
 ## Kjerne funksjonalitet
 1. Fungerende Webside
@@ -24,11 +25,11 @@ visuel vegvisar til blog og bestillings side, kanskje i form av knapper med .SVG
     - utviklings stadiene ( martna, catering, kiosk, restaurant )
 3. Lokasjon til kjøkkenet
 
-om Emilie
+**om Emilie**
 - erfaring
 - stilling
 
-om Andres
+**om Andres**
 - erfaring
 - stilling
 
