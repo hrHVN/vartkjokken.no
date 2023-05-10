@@ -1,0 +1,10 @@
+[
+    {
+        "allergi": "laktose",
+        "beskrivelse": "Melkesukker intoleranse, er for orsaket av at tarmen ikkje kan spalte laktosen lenger",
+        "reaksjoner": {
+            "alvorlighets_grad": "intoleranse",
+            "reaksjoner": []
+        }
+    }
+]
