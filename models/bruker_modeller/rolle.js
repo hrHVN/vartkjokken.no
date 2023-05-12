@@ -1,6 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 
-class Rolle extends Model {};
+class Rolle extends Model {
+    static associate(models) {
+        this.hasMany(Bruker);
+    }
+};
 
 Rolle.init({
     name: {
@@ -10,5 +14,5 @@ Rolle.init({
     }
 }, {
     sequelize, // We need to pass the connection instance
-    modelName: 'rolle' // We need to choose the model name
+    modelName: 'Rolle' // We need to choose the model name
 });

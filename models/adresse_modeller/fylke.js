@@ -1,8 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
+export default class Fylke extends Model {
+    static associate(models) {
+        this.hasMany(By);
+    }
+ };
 
-export default class ForNavn extends Model { };
-
-ForNavn.init({
+Fylke.init({
     navn: {
         type: DataTypes.STRING,
         require: true,
@@ -10,5 +13,5 @@ ForNavn.init({
     }   
 },{
     sequelize,
-    modelName: 'forNavn'
+    modelName: 'Fylke'
 });

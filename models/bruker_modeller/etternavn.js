@@ -1,6 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 
-export default class EtterNavn extends Model { };
+export default class EtterNavn extends Model { 
+    static associate(models) {
+        this.hasMany(Bruker);
+    }
+};
 
 EtterNavn.init({
     brukerNavn: {
@@ -10,5 +14,5 @@ EtterNavn.init({
     }   
 },{
     sequelize,
-    modelName: 'etterNavn'
+    modelName: 'EtterNavn'
 });

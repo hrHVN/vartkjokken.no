@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
-export default class Passord extends Model { };
+export default class Passord extends Model {
+    static associate(models) {
+        this.hasMany(Bruker);
+    }
+ };
 
 Passord.init({
     passord: {
@@ -11,7 +15,7 @@ Passord.init({
     }
 }, {
     sequelize,
-    modelName: 'passord',
+    modelName: 'Passord',
     // experimentell
     hooks: {
         beforeCreate: async (passord) => {
